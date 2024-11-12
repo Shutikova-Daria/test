@@ -1,0 +1,986 @@
+*,  
+*::before,  
+*::after {  
+    box-sizing: border-box;  
+}  
+
+body, html {  
+    margin: 0;  
+    padding: 0;  
+    font-family: Arial, sans-serif;  
+}  
+
+.header {  
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
+    height: 80px;  
+    padding: 0 50px;  
+    background-color: #ffffff;  
+}  
+
+/* Інші стилі... */  
+
+.subcontainer {  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: flex-start;  
+    align-items: flex-start;  
+    background: #003366;  
+    border-radius: 20px;  
+    color: #FBFBFB;  
+    width: 700px;   
+    height: 185px;  
+    padding: 60px;   
+    /* Удалили float: left; */  
+}  
+
+.section1 {  
+    background-color: rgba(224, 231, 239, 1);  
+    height: 430px;  
+    padding: 50px 290px;  
+    opacity: 1; /* Змінено на 1 */  
+    /* gap: 0px; */  
+}  
+.block {  
+    height: 300px;  
+    width: 400px;   
+    background-color: #ffffff;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    border-radius: 20px;  
+    text-align: center;  
+    padding: 20px;  
+    box-sizing: border-box;  
+}  
+
+.icon {  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    margin-bottom: 15px;  
+}  
+
+.icon img {  
+    width: 74px;  
+    height: 74px;  
+}  
+
+.block h3 {  
+    font-size: 18px;  
+    margin: 10px 0;  
+    color: #003366;  
+    font-family: 'Poppins', sans-serif;  
+}  
+
+.block p {  
+    font-size: 14px;  
+    color: #333;  
+}  
+
+.section2 {  
+    background-color: rgb(255, 255, 255);  
+    height: 430px;  
+    padding: 50px 290px 53px 290px;  
+    gap: 0;  
+    opacity: 1; /* Змінено на 1 */  
+}  
+
+.heading {  
+    display: flex;  
+    flex-direction: row;  
+    justify-content: space-between; /* Заміна float на flex */  
+    align-items: center;  
+    background: #ffffff;  
+    border-radius: 20px;  
+    height: 80px;  
+    width: calc(100% - 40px); /* Динамічна ширина */  
+    padding: 5px 30px;  
+    margin: 0 auto; /* Центрування */  
+}  
+
+.arrow {  
+    width: 50px;  
+    height: 50px;  
+    border-radius: 50%;  
+    background-color: #003366;  
+    color: #FBFBFB;  
+    font-size: 34px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    border: none;  
+    margin-left: auto; /* Вирівнювання вправо */  
+}
+.heading p {  
+    color: black;  
+    font-family: 'Roboto';  
+    font-size: 20px;  
+    font-weight: 500;  
+    line-height: 30px;  
+    text-align: left;  
+}  
+
+.photos img {  
+    width: 100%; /* Оновлено для адаптивності */  
+    max-width: 515px;  
+    height: auto; /* Змінено на auto для збереження пропорцій */  
+    border-radius: 14px;   
+    margin: 0 auto; /* Центрування */  
+}  
+
+.contains {  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: flex-start;  
+    align-items: center; /* Використовуйте центрування */  
+    border-radius: 20px;  
+    color: #FBFBFB;  
+    width: 70%; /* Відсоткова ширина для адаптивності */  
+    max-width: 700px; /* Максимальна ширина */  
+    height: auto; /* Автоматична висота */  
+    padding: 50px 100px;  
+    background-color: #ffffff;  
+    gap: 30px;   
+}  
+
+.block {  
+    width: 254.5px;  
+    height: 163px;  
+    background-color: #003366;  
+    color: #FBFBFB;  
+    text-align: center;  
+    border-radius: 14px;  
+    padding: 25px 15px; /* Об'єднане padding */  
+    margin: 10px auto; /* Центрування */  
+}  
+
+.block h4 {  
+    font-size: 30px;  
+    font-weight: 500;  
+    font-family: 'Poppins', sans-serif;  
+    margin: 20px 0 10px; /* Залиште один раз margin для заголовків */  
+}  
+
+.block p {  
+    font-family: 'Roboto';  
+    font-size: 16px;  
+    font-weight: 400;  
+    text-align: center;  
+    margin: 10px 0; /* Зменшено */  
+}  
+
+.headcours {  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: flex-start;  
+    background: #ffffff;  
+    border-radius: 20px;  
+    height: 60px;  
+    width: calc(100% - 60px); /* Динамічна ширина з відступами */  
+    padding: 5px 30px;  
+    margin: -25px auto 0;  
+}  
+
+.headcours h2 {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 500;  
+    font-size: 36px;  
+    line-height: 63px;  
+    color: #003366;  
+    text-align: left;  
+}
+/* Загальний стиль для курсів */  
+.coursebox {  
+    border: 2px solid #003366;  
+    width: 100%; /* Використовується відсоток для адаптивності */  
+    max-width: 1045px; /* Максимальна ширина */  
+    height: 730px;  
+    background-color: #ffffff;  
+    padding: 5px 30px; /* Об'єднано */  
+    border-radius: 14px;  
+    box-sizing: border-box; /* Додаємо box-sizing */  
+}  
+
+/* Стиль для елементів курсу */  
+.coursepar {  
+    display: flex;  
+    align-items: center; /* Центруємо по вертикалі */  
+    margin-top: 20px; /* Відступ зверху */  
+}  
+
+.coursepar img {  
+    width: 60px;  
+    height: 60px;  
+    border-radius: 12px;  
+    margin-right: 20px; /* Правий відступ замість від’ємного margin */  
+}  
+
+.coursepar h4 {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 500;  
+    font-size: 18px;  
+    line-height: 63px;  
+    color: #003366;  
+}  
+
+.coursepar p {  
+    color: black;  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 16px;  
+    font-weight: 500;  
+    line-height: 30px;  
+    text-align: left;  
+    margin-left: auto; /* Автоматичне маржинування зліва */  
+}  
+
+/* Стиль для стрілки */  
+.strila2 {  
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    background-color: #003366;  
+    color: #FBFBFB;  
+    font-size: 24px;  
+    margin-top: -20px;  
+    margin-left: auto; /* Автоматичне маржинування зліва для відображення праворуч */  
+    border: none;  
+}  
+
+/* Для блоків з іконками */  
+.icons {  
+    display: flex;  
+    justify-content: space-between; /* Вирівнюємо іконки */  
+    background-color: rgb(255, 255, 255);  
+    width: 100%; /* Відсоткова ширина */  
+    max-width: 1040px; /* Максимальна ширина */  
+    height: 60px;  
+}  
+
+/* Стиль для годинника */  
+.clock, .computer {  
+    height: 47px;  
+    width: 135px;  
+    border-radius: 45px;  
+    background-color: rgba(239, 243, 247, 1);  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 18px;  
+    font-weight: 500;  
+    display: flex;  
+    align-items: center; /* Центруємо по вертикалі */  
+    margin: 7px 10px; /* Встановлюємо відступи */  
+}  
+
+.clock img, .computer img {  
+    width: 30px;  
+    height: 30px;  
+    padding: 6px 20px; /* Зовнішні відступи */  
+}  
+
+.clock p, .computer p {  
+    text-align: center;  
+    margin: 0; /* Скидання маргіну */  
+}  
+
+/* Додаємо адаптивність */  
+@media (max-width: 768px) {  
+    .coursebox {  
+        width: 90%; /* Використовуйте відсотки для малих екранів */  
+    }  
+}
+/* Стиль для кнопки з мовою */  
+.booklang {  
+    height: 47px;  
+    width: 135px;  
+    border-radius: 45px;  
+    background-color: rgba(239, 243, 247, 1);  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 18px;  
+    font-weight: 500;  
+    text-align: center;  
+    margin: 7px 10px 0 0; /* Заміна від’ємних значень на позитивні */  
+    display: flex;  
+    align-items: center; /* Центруємо контент по вертикалі */  
+}  
+
+.booklang p {  
+    margin: 12px 20px 0 0; /* Поліпшене управління відступами */  
+}  
+
+/* Стиль для зображення в кнопці */  
+.booklang img {  
+    width: 30px;  
+    height: 30px;  
+    padding: 6px 20px; /* Зменшено для зручності */  
+}  
+
+/* Стиль для слів */  
+.words {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 500;  
+    font-size: 16px;  
+    line-height: 63px;  
+    color: #003366;  
+    margin-top: -10px; /* Продовжуйте використовувати позитивні значення, якщо можливо */  
+}  
+
+/* Стиль для рівня 1 */  
+.level1 h4, .level2 h4 {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 600;  
+    font-size: 16px;  
+    line-height: 63px;  
+    color: black;  
+    margin-bottom: 10px; /* Відступ між заголовками і вмістом */  
+}  
+
+/* Стиль для списків */  
+.list1, .list2 {  
+    margin-top: 0; /* Скидання верхнього відступу */  
+    padding-top: 100px; /* Додаємо верхній padding */  
+}  
+
+.list1 ul, .list2 ul {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 500;  
+    font-size: 16px; /* Можливо, потрібно допасувати для другого списку */  
+    list-style: none;  
+    margin: 0; /* Відсутність додаткового маргіну */  
+}  
+
+.list1 li, .list2 li {  
+    padding: 5px 0; /* Зменшено відступ між елементами списку */  
+}  
+
+/* Стиль для іконок з перевіркою */  
+.check-icon1, .check-icon2, .check-icon3 {  
+    width: 28px;   
+    height: 28px;  
+    margin: 0 8px; /* Принцип об'єднання стилів */  
+}
+/* Стиль для іконок */  
+.check-icon {  
+    width: 28px;   
+    height: 28px;  
+    margin-right: 8px;   
+    vertical-align: middle;  
+}  
+
+/* Визначте спільні стилі для всіх check-icon */  
+.check-icon4, .check-icon5, .check-icon6, .check-icon7, .check-icon8, .check-icon9 {  
+    margin-left: 8px; /* Використання позитивного значення */  
+}  
+
+/* Різні значення margin-top для кожної іконки */  
+.check-icon5 {  
+    margin-left: -84px;  
+    margin-top: -5px;  
+}  
+.check-icon6 {  
+    margin-left: 35px;  
+    margin-top: -8px;  
+}  
+.check-icon7, .check-icon8, .check-icon9 {  
+    margin-left: -90px;  
+}  
+
+/* Стиль для заголовка рівня 3 */  
+.level3 h4 {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 600;  
+    font-size: 16px;  
+    line-height: 63px;  
+    color: black;  
+    margin-bottom: 10px;  
+    margin-top: 40px; /* Визначте позитивний margin */  
+}  
+
+/* Стиль для списку 3 */  
+.list3 {  
+    margin-top: 20px;  
+}  
+
+.list3 ul {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 500;  
+    font-size: 15px;  
+    list-style: none;  
+    padding-top: 10px; /* Зменшено padding-top */  
+    text-align: left;  
+    margin-left: 50px;  
+}  
+
+.list3 li {  
+    padding: 5px 0; /* Використання позитивних значень */  
+}  
+
+/* Стиль для ціни */  
+.price p {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 600;  
+    font-size: 24px;  
+    line-height: 63px;  
+    color: #003366;  
+    margin-left: 5px;  
+}  
+
+/* Стиль для кнопки приєднання */  
+.join-button {  
+    width: 170px;  
+    height: 50px;  
+    background-color: #003366;  
+    color: #FBFBFB;  
+    border-radius: 12px;  
+    border: none;  
+    margin-top: 40px;  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 18px;  
+    font-weight: 400;  
+    line-height: 30px;  
+    display: inline-block; /* Зміна стиля для кнопки */  
+}  
+
+/* Стиль для контейнера курсів */  
+.coursebox2 {  
+    background-color: #ffffff;  
+    border: #003366 solid 2px;  
+    padding-left: 30px;  
+    width: 1045px;  
+    height: 735px;  
+    margin-top: 30px;  
+    border-radius: 12px;  
+}  
+
+/* Стиль для модулів */  
+.modules {  
+    height: 47px;  
+    width: 140px;  
+    border-radius: 45px;  
+    background-color: rgba(239, 243, 247, 1);  
+    font-family: 'Roboto';  
+    font-size: 18px;  
+    font-weight: 500;  
+    text-align: center;  
+    margin-top: 7px;  
+    margin-left: 10px;  
+    display: flex; /* Використання flexbox для центрування */  
+    align-items: center;  
+}  
+
+.modules img {  
+    width: 30px;  
+    height: 30px;  
+    padding: 6px 15px; /* Зменшено для зручності */  
+}  
+
+.modules p {  
+    font-family: 'Roboto';  
+    font-size: 18px;  
+    font-weight: 500;  
+    text-align: right;  
+    margin-left: 20px; /* Вибрано позитивне значення */  
+}
+/* Загальний стиль для іконок */  
+.check-icon {  
+    width: 28px;   
+    height: 28px;  
+    margin-right: 8px;   
+    vertical-align: middle;  
+}  
+
+/* Стиль для годинника */  
+.clock2 {  
+    height: 47px;  
+    width: 140px;  
+    border-radius: 45px;  
+    background-color: rgba(239, 243, 247, 1);  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 18px;  
+    font-weight: 500;  
+    text-align: center;  
+    margin-top: 7px;  
+    display: flex; /* Використання flex */  
+    align-items: center; /* Центрування по вертикалі */  
+    padding: 0 20px; /* Заміна padding_left і padding_right */  
+}  
+
+.clock2 img {  
+    width: 30px;  
+    height: 30px;  
+    padding: 6px 20px;  
+}  
+
+/* Стиль для тексту під годинником */  
+.clock2 p {  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 18px;  
+    margin-left: 10px;  
+}  
+
+/* Стиль для заголовків */  
+.level h4 {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 600;  
+    font-size: 16px;  
+    line-height: 63px;  
+    color: black;  
+    margin-top: 20px;  
+}  
+
+/* Стиль для списків */  
+.list ul {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 500;  
+    font-size: 16px;  
+    list-style: none;  
+    padding-top: 100px;  
+    margin: 0; /* Знищити margin */  
+}  
+
+.list {  
+    margin-top: 0; /* Вирівнювання margin */  
+}  
+
+.list li {  
+    padding: 5px 0; /* Використання одного padding */  
+}  
+
+/* Стилі для check-icon */  
+.check-icon {  
+    margin-left: 10px; /* Спільне значення для іконок */  
+}  
+
+/* Специфічні стилі для різних класів. Розробка з урахуванням правил DRY */  
+.check-icon12, .check-icon22, .check-icon32, .check-icon4, .check-icon5 {  
+    margin-top: -5px; /* Позитивне значення */  
+}  
+
+/* Стисло введіть стилі для різних класів */  
+.level12 {  
+    margin-left: -420px; /* Визначте у вашому макеті */  
+}  
+
+.level22 {  
+    margin-left: -823px; /* Визначте у вашому макеті */  
+}
+/* Загальний стиль для іконок */  
+.check-icon {  
+    width: 28px;   
+    height: 28px;  
+    margin-right: 8px;   
+    vertical-align: middle;  
+}  
+
+/* Стиль для заголовків */  
+.level32 h4 {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 600;  
+    font-size: 16px;  
+    line-height: 63px;  
+    color: black;  
+    margin-top: 100px;  
+}  
+
+.list32 ul {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 500;  
+    font-size: 15px;  
+    list-style: none;  
+    padding-top: 110px;  
+    margin-left: 50px; /* Встановіть margin */  
+    text-align: left;  
+}  
+
+.list32 {  
+    margin-top: 0; /* Уникаємо негативних значень */  
+}  
+
+.list32 li {  
+    padding-top: 5px; /* Виправлено, щоб уникнути негативних значень */  
+    padding-bottom: 5px;  
+}  
+
+/* Стиль для блока ціни */  
+.price2 p {  
+    font-family: 'Poppins', sans-serif;  
+    font-weight: 600;  
+    font-size: 24px;  
+    line-height: 63px;  
+    color: #003366;  
+    margin-left: 5px;  
+}  
+
+/* Стиль для блоку */  
+.box1 {  
+    background-color: #003366;  
+    width: 100%;  
+    height: 300px;  
+    margin-top: -40px; /* Замініть його на позитивне значення, якщо можливо */  
+}  
+
+/* Стиль для текстового блоку */  
+.textcompany {  
+    width: 505px;  
+    height: 333px;  
+    color: #FBFBFB;  
+    text-align: left;  
+    border-radius: 14px;  
+    padding: 45px 15px; /* Встановлення padding */  
+    margin: 10px 0 0 85px; /* Встановлення margin */  
+}  
+
+.textcompany h4 {  
+    font-size: 30px;  
+    font-weight: 500;  
+    margin-top: 20px; /* Виправлене, без padding-top */  
+}  
+
+.textcompany p {  
+    font-family: 'Roboto';  
+    font-size: 18px;  
+    font-weight: 400;  
+    text-align: left;  
+    padding: 40px 0 10px; /* Встановлення padding */  
+}  
+
+/* Стиль для форми */  
+.form {  
+    width: 505px;  
+    height: 333px;  
+    color: #FBFBFB;  
+    text-align: left;  
+    border-radius: 14px;  
+    padding: 45px 15px; /* Встановлення padding */  
+    margin: -385px 0 0 650px; /* Встановлення margin */  
+}  
+
+.firstInput,  
+.secondInput {  
+    width: 500px;  
+    height: 50px;  
+    margin-bottom: 20px; /* Залиште, якщо для другого - 25px */  
+}  
+
+.secondInput {  
+    margin-bottom: 25px; /* Встановлення margin */  
+}  
+
+/* Стиль для кнопки */  
+.formbutton {  
+    width: 170px;  
+    height: 50px;  
+    border-radius: 10px;  
+    color: #003366;  
+    font-size: 16px;  
+    font-weight: 400;  
+    border: none;  
+}
+/* Контейнери для відгуків */  
+.testimonial-container {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    width: 1040px;  
+    padding: 20px;  
+}  
+
+.testimonial-container h1 {  
+    color: #003366;  
+    font-family: 'Poppins', sans-serif;  
+    font-size: 24px;  
+    margin-bottom: 20px;  
+    text-align: left; /* видалено float */  
+}  
+
+/* Контейнер для карток відгуків */  
+.testimonial-cards {  
+    display: flex;  
+    justify-content: center;  
+    gap: 20px;  
+}  
+
+/* Спільні стилі для карток відгуків */  
+.testimonial-card {  
+    display: flex;  
+    border: 1px solid #003366;  
+    border-radius: 10px;  
+    width: 500px;  
+    padding: 15px;  
+    background-color: #fff;  
+}  
+
+/* Картки зображень */  
+.testimonial-card img {  
+    width: 200px;  
+    height: 225px;  
+    border-radius: 10px;  
+    margin-right: 15px;  
+}  
+
+/* Текст відгуків */  
+.testimonial-text {  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+}  
+
+.testimonial-text h3 {  
+    font-size: 18px;  
+    margin: 5px 0;  
+}  
+
+.testimonial-text h4,  
+.testimonial-text p {  
+    font-size: 14px;  
+    color: #666;  
+}  
+
+/* Зірки */  
+.stars {  
+    color: gold;  
+    margin: 5px 0;  
+}  
+
+/* Пагінація */  
+.pagination {  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    padding: 10px 20px;  
+    border: 2px solid #d1dce5;  
+    border-radius: 30px;  
+    width: 200px;  
+    height: 40px;  
+    margin: 20px auto; /* Центрування */  
+}  
+
+.page-btn {  
+    background-color: #d1dce5;  
+    border: none;  
+    border-radius: 50%;  
+    width: 35px;  
+    height: 35px;  
+    color: white;  
+    font-size: 18px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+}  
+
+.page-btn.right-btn {  
+    background-color: #003366;  
+}  
+
+.page-btn:hover {  
+    opacity: 0.8;  
+}  
+
+/* Точки пагінації */  
+.dots {  
+    display: flex;  
+    align-items: center;  
+    gap: 8px;  
+    margin: 0 15px;  
+}  
+
+.dot {  
+    width: 8px;  
+    height: 8px;  
+    background-color: #d1dce5;  
+    border-radius: 50%;  
+    transition: background-color 0.3s ease;  
+}  
+
+.dot.active {  
+    width: 12px;  
+    height: 8px;  
+    background-color: #003366;  
+    border-radius: 10px;  
+}  
+
+/* FAQ Контейнер */  
+.faq-container {  
+    display: flex;  
+    align-items: flex-start;   
+    width: 100%;  
+    gap: 40px;  
+    margin-top: 100px;  
+}  
+
+.items {  
+    margin: 50px 0 0 -150px; /* Залишіть це тільки, якщо це необхідно */  
+    width: 100%;  
+}  
+
+.faq h6 {  
+    font-size: 30px;  
+    color: #003366;  
+    margin: -50px 0 0 100px;  
+    padding-top: 50px;  
+    width: 100px;   
+    font-family: Poppins, sans-serif;  
+    font-weight: 600;  
+}  
+
+/* FAQ секція */  
+.faq-section {  
+    flex: 1;  
+}  
+
+.faq-item {  
+    background-color: #fff;  
+    border: 1px solid #003366;  
+    border-radius: 8px;  
+    margin-bottom: 10px;  
+}  
+
+/* Основний стиль для секції FAQ */  
+.faq-section {  
+    flex: 1;  
+    margin-top: 0;  
+}  
+
+/* Стиль для окремих елементів FAQ */  
+.faq-item {  
+    background-color: #fff;  
+    border: 1px solid #003366;  
+    border-radius: 8px;  
+    margin-bottom: 10px;  
+    overflow: hidden;  
+}  
+
+/* Спільні стилі для запитань FAQ */  
+.faq-question,   
+.faq-question2,   
+.faq-question3 {  
+    display: flex;  
+    justify-content: space-between;  
+    padding: 15px;  
+    font-size: 16px;  
+    font-weight: bold;  
+    color: #003366;  
+    height: 51px;  
+    margin: 10px 0; /* Об'єднано margin-top і margin-bottom */  
+}  
+
+/* Кнопка перемикання */  
+.toggle-btn {  
+    background: none;  
+    border: none;  
+    font-size: 20px;  
+    width: 24px;  
+    height: 24px;  
+    border-radius: 50%;  
+    background-color: #003366;  
+    color: #ffffff;  
+    cursor: pointer;  
+}  
+
+/* Відповіді в FAQ */  
+.faq-answer {  
+    padding: 0 15px 15px;  
+    font-size: 14px;  
+    color: #666;  
+}  
+
+/* Спеціальний стиль для відповідей */  
+.answ {  
+    border-bottom: 1px solid #003366;  
+    height: 35px;  
+}  
+
+/* Форма запитань */  
+.question-form {  
+    background-color: #003366;  
+    color: #fff;  
+    padding: 20px;  
+    border-radius: 8px;  
+    width: 320px;   
+    height: 400px;  
+    margin-top: 50px;  
+    margin-right: 80px;  
+    display: flex; /* Додано для вирівнювання елементів */  
+    flex-direction: column;  
+    align-items: center;  
+}  
+
+/* Заголовок форми */  
+.question-form h2 {  
+    font-size: 20px;  
+    margin-bottom: 20px;  
+    border-bottom: 1px solid #fff;  
+    padding-bottom: 10px;  
+    font-family: 'Roboto', sans-serif;  
+    text-align: center;  
+}  
+
+/* Інпут та текстова область в формі */  
+.question-form input,  
+.question-form textarea {  
+    width: 300px;   
+    padding: 10px;  
+    margin-bottom: 15px;  
+    border: none;  
+    border-radius: 5px;  
+}  
+
+.question-form textarea {  
+    height: 70px;  
+}  
+
+/* Плейсхолдер для інпуту та текстової області */  
+.question-form input::placeholder,  
+.question-form textarea::placeholder {  
+    color: #666;  
+}  
+
+/* Кнопка відправлення */  
+.submit {  
+    width: 180px;  
+    height: 40px;  
+    border-radius: 10px;  
+    border: none;  
+    color: #003366;  
+    margin-top: 20px;  
+    font-family: 'Roboto', sans-serif;  
+    font-weight: 400;  
+}  
+
+/* Футер */  
+.footer {  
+    width: 100%;  
+    height: 65px;  
+    background-color: #ffffff;  
+    color: black;  
+    margin-top: 20px;  
+    display: flex; /* Додано для центрування */  
+    flex-direction: column;  
+    align-items: center; /* Центрування футера */  
+}  
+
+/* Заголовок футера */  
+.footer h4 {  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 16px;  
+    font-weight: 400;  
+}  
+
+/* Зображення в футері */  
+.footer img {  
+    margin-top: 10px;  
+    margin-left: 100px; /* Розгляньте можливість використання flex для позиціонування */  
+}  
+
+/* Підзаголовок футера */  
+.footer h5 {  
+    text-align: left;  
+    margin-left: 1010px; /* Зв'язок із шириною екрану */  
+    font-family: 'Roboto', sans-serif;  
+    font-size: 14px;  
+    font-weight: 400;  
+}
