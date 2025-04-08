@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winter Look Builder</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      height: 40px;
+      background: #fff;
+      position: fixed;
+      margin-top: 30px;
+      border-radius: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border-bottom: 1px solid #ddd;
+    }
+    .checkout-btn {
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      opacity: 0.4;
+      pointer-events: none;
+      transition: opacity 0.5s;
+    }
+    .checkout-btn.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .hero {
+      position: relative;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 100px;
+      text-align: center;
+      color: black;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: url("https://s3-alpha-sig.figma.com/img/00e1/061f/8a55db30d451cebfb0b7a7884a6dd49a?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=PSVexFuzgX1SDqgW9auNxQZtj30wPk4vncVqeH-7g10IV2aI6Re3fD0B0-0BH1cCBwdYIRXhIzjYk2~CEOlFa~CBxn0ilZg1HyjDH4nbpeaAFa5NBLHLS1wdf1zEd2TIZbU6BOgpSV9R8u8An6G8XMEl7AKcqLLG7BFfeKnwo~iF7RPgbt2YsSpqh3klvW6~k2utAYwEUAyA5G4viRBRgkJLOn3fMDFZpBTJGgVpFXbk1m15swhHSzU7bMQa8KFVAnJmXFisoVnRrmbyICyG5UzCV8lAthquAlTUpf6RfZsEyVTLoYpQOBYRCKqoD8oViKvHpyUwwGwyeMWkKT7Juw__") left center/cover no-repeat;
+      z-index: -1;
+    }
+    .hero h1 {
+      font-size: 32px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 10px auto;
+    }
+    .hero button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #0000ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: fit-content;
+    }
+    .builder {
+      padding: 40px 20px;
+      background: #f7f7f7;
+      margin-top: 80px;
+    }
+    .step {
+      margin-bottom: 40px;
+    }
+    .step h2 {
+      text-align: center;
+    }
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      text-align: center;
+      width: 200px;
+    }
+    .product img {
+      width: 170px;
+      height: 230px;
+    }
+    .product button {
+      margin-top: 10px;
+      background: #0000ff;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .product button.inactive {
+      background: #ccc;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/logo/vector(1).png" alt="Logo" height="40">
+    <button id="checkout" class="checkout-btn">0 / 3 PRODUCTS SELECTED  CHECKOUT</button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>CREATE YOUR OWN WINTER LOOK</h1>
+      <p>CHOOSE ONE PRODUCT IN EACH SECTION AND GET SET TO HIT THE WHITE BLANKET</p>
+      <button id="startBtn">START</button>
+    </div>
+  </section>
+
+  <section class="builder">
+    <div class="step" id="step1">
+      <h2>STEP 1<br><small>SELECT SNOWBOARD</small></h2>
+      <div class="products">
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/97f9/615c/6759ebac4e3bd8ca3f765661df283174?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=aPgSVZ9rwBPY1IvF8jW1H5mcr~P8BhYOFgwMBH-9efvcob99jvNIfl1agGmz4SgvgSUzky~kTTIzMU7YPv15p1Bu-Ai2ais4~oHFfAY-lvxFEXXtbUogUoGNAoci0AaV0tdpx6KmzDOXkCVLcUgOwEayH45M6HkKHvG9G9si~JEBzsbBsP36u3zo6q4oRiaDjhkit25ao0EXMAggEwgWTGXrMJqpZ2dD82RiqLqpv5zxsQkbOwVqPjIi1752eI-uF3pmaImru8FpMHyyXyST0lIDR9vTBluozZSdWYFoBRK3cibIF5kpC4uI6zWlmEpe5KZ0QEdgbH2PLNxpY7HTNA__"><p>$120</p><button class="select-btn">SELECT</button></div>
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/28c8/a55e/313f30a3116a4fecb225d09a4559ef93?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=kc6DuRcQ8z1PdtDsrxKUQeZi2eux8XDLKUapW2frPfxyWuF9PYldHtCeprQG741wG7z8XPsXLeqzuGeY2MEOC9diZw9IIEK~eZeU3QlZUVSmfD1wbEUOpiieRW9EsG39fqqGqlGqmRJrhepjcSlHJ537RH-gMfn2PQxAegyWp500lRG~kw97R6gybsAWHyFX5no3kLjw0-HFqv4vrdcTU42zypnLeoSitYjP~iVY-6oAEjWr7ksGWimMVbUQKlroZdYXahAy4JoHS~MW6eNDQ3dCZsNNdOr7jCCQz2Zn-iREMUOfBhJTAPoarV0twl-iqCKai-47x3cmq7kay3wzOQ__"><p>$130</p><button class="select-btn">SELECT</button></div>
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/e2be/9f42/ebfd006c873e26a01fbaa77e3624b293?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=F76Y061-9zVT23OmZjSobq0sqOKazOm1ds5oIy3g~g6rpBWYX7FYnhdXBHNblaBb59vi8Ssrm4d4pBopMDCev5E4kYAzkBvv8K3L9XPzhAJBb4uzgPGbSBjNAqy4LlUNLjzUEnX2jWNrzJBlzzGt4yZyt6SL6BYxtVioi901gX9FdbbVbxP6c~ARf70i5le~HVd4O~SFUFWVZ2jmXPrMfGqyPkUhlmO13dvfLt0bC4f8h2qKTksTT4JAB8PZBPL9EwqPzVA3MuEvmnh4qDKBsr2l3aX~5Tna3-YEa9OlMWCVoLY4~vB7OSGyw7079Re5LD3Rh4cxsFihwv9WzpPTKQ__"><p>$140</p><button class="select-btn">SELECT</button></div>
+      </div>
+    </div>
+    <div class="step" id="step2">
+      <h2>STEP 2<br><small>SELECT JACKET</small></h2>
+      <div class="products">
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/b0b3/aa86/2153efd84cc72839e103623c0c61d2d3?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=elFr9poCwL5-qTWfs-W3uDBRXNHJTv80DA4e198tSx-LV-GmLCtTpHGYDsDfp8eAAv4n~BJWUNHe6~QRl2k7npGnjw~TWqsAsOXhG75a3sjVGiOllpcbZSreP1w0rO2t0rej8PXwPWLTkkiGVXWVOW4FLVsnoIffvlvTes3QM80h~R87KQYzHXrrcBj6mngLVQILDMBDkwxxdjlWlQzXxrVBjzUrwtY5a57FxKDQnfOha670oVL02v8Mkj4Jz3OHUC6VbXLKoCozu957lmTI1qK0GoXJMFr-1QE7Ep5qTfvoHCjLooz8M7Ofd1gjEpcZEc1ljQl2LaCAFD37DOsP-A__"><p>$90</p><button class="select-btn">SELECT</button></div>
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/f024/c204/8ba8033b7ee7b85e0a78570edf0bf63c?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=EyO5uGqFqy8dUl6e6FLS3ENcxCBElx9bip4E3VEnpyGdXZJy1WT-2u-lP7SEF86cftt~mngANfeh82fQyAIb2In7TfbdgZrbKIkTmayziVVCtcUaZNOj2VWxIJzVW4SH41BxRJBAhm42eUg0MpUffWxLEZ~WrPgwRbSPUGO~9BpFXARvbV9opLVyuF~TG-~R3B6y-i-VOfNWnKKRO1hhU5eJbb1GFiWaMoNn3-kA-l4EX5zwgI44wUCu-aCKvTGmtC4AfspyJrWR2Q4-Kw~g1~X8vt2dv~kQZ6H99vP8fzrfbmA6Fht2hNvxLDVQO-GNpX56TlJcBsAtP0o4TQaYUg__"><p>$100</p><button class="select-btn">SELECT</button></div>
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/bc55/a394/b5acc621b53d7180d85e9bb2a300af19?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=mPpsteOQqTYysAaGe~n6aLy3fRWwwIvKQ7PHusmZukpPu64qfam2t-4zG~txUFsBW848WClvWvu7ewv5WguZgCvCbJSahe5~zOL3WT-8YuN3FELAdWeSh2iDs2mTOWmjLJiPOHNoII7KJLS4eSr90xgI~5yMYh~vPACLaRb9PGmZ92o1zZ0xdwdNOpFaVY2jFAOpoiVmvDdFG9oGggKH44DMZaHRVemlbw15BhjwIE~HFEGLsfTIXM9QmFu1FmFyYPYQnZyMov7oLbVtdYZdnVrIIK03KxMbpxoCpZ1l9uOOT-NSeBUOBQwVIHg8CXT8x6jALZx0TqKqq~wiACZQ~Q__"><p>$110</p><button class="select-btn">SELECT</button></div>
+      </div>
+    </div>
+    <div class="step" id="step3">
+      <h2>STEP 3<br><small>SELECT HELMET</small></h2>
+      <div class="products">
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/5a44/bb7d/f82274afd490eaa61f6fe55b5d8bd098?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=FAtRbIeWcG4Wlj4goLeP7sZ8ofr9FcqMBWPQ37qiMVrO1176I7CT7~kj4IO0e5LF1hFqw5LhUZj8D1PPaqKD~omsM-5ziI7EeY7lJJjDYyqVLF2P3GhDJUczgJuU6K0MVcvlsEeJ8UR7iuhwHqo-umV7OQ7o5yKx1noWs57EDNGDTyV3gqxoxFLzAPqfNZ9b-7-CJKy-5xZbB-e7S~2eQeqk-SwTpfjDBfhrPtyUJXXuSD9B03hh2Jb7K~5WBVi4zip2DqUDNgwun8IUloB3hjz46CA6lFxnhGHTkKTZVf5NQFW0OnWCo-1vLVvnbTx6V67siVZZ9fUeiUxO72Wi8A__"><p>$45</p><button class="select-btn">SELECT</button></div>
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/2157/de1f/ebd5a8ff87e65604ad61619e46cb0217?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=LX9DjzrpGN1TYxTkCHk5kSElRBaiXCnVDLb~JH3ecKy69ljdqecIg01ikbpQCrmsvFRJFfwnMm4TFzW7iLQVgZ1Ngac8qXrhshPNdQx7B06Izh2dUO9kYUCfCfmuzp3kvQDBW70fwqKZOx~gEg6sc0xhlmaWOCg6-ZB6w7cGDyB8YG4UCCZIBN4~XVcpQeJyJuY9oGvYr7JZK60SiKgJg4trkiTqOovnhQAmM39BdiKS8y6NlDtvXSxxC0NMZHM03UaubhQmJLCRQve12yeucK0CAhPxb8L~QJWW5u~-to6DpDj4w-eyC4L~VRc~tL~DmCsF7OxEya1g9qJcRpBGLA__"><p>$50</p><button class="select-btn">SELECT</button></div>
+        <div class="product"><img src="https://s3-alpha-sig.figma.com/img/8887/9246/23959124dccbacae6e903450729e2586?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=mMR25uwInjYP9NclzCei-~izHaL4w0KygpwfnyJsd~7aXQ1bUwdU8EZ0j4kr5DKrc3DxXVblIAE8dsaHrk8607stFD9A0jfQIIRxf5BMKwNFftObEEv1UAa5eEZeeM014eZQ6vde2k083tK1iKRrGQIDobaCcGU7CC4uEQB0g9AfSRWKjv53T5Bof9vbvWfL7PaVQ2TlbYSn4GiKruet7lLEEiZGEMh33Mf69C11-DnU91Z4te~Vfp9im7lRtZlvpPjeHUbW2dgmYNEkkidKdAyi9YoC0UggrHM1HrvsQQTAT~xL4skWNqE48bPeoj1hbmIS6XwDAlAPyTFRPIhGlw__"><p>$60</p><button class="select-btn">SELECT</button></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const sections = ['step1', 'step2', 'step3'];
+    const selections = { step1: false, step2: false, step3: false };
+
+    document.getElementById('startBtn').addEventListener('click', () => {
+      document.getElementById('step1').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelectorAll('.step').forEach(step => {
+      const buttons = step.querySelectorAll('.select-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => {
+            b.classList.add('inactive');
+          });
+          btn.classList.remove('inactive');
+          const stepId = step.id;
+          selections[stepId] = true;
+          updateCheckout();
+
+          const nextIndex = sections.indexOf(stepId) + 1;
+          if (nextIndex < sections.length) {
+            document.getElementById(sections[nextIndex]).scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+
+    function updateCheckout() {
+      const count = Object.values(selections).filter(Boolean).length;
+      const btn = document.getElementById('checkout');
+      btn.textContent = `${count} / 3 PRODUCTS SELECTED — CHECKOUT`;
+      if (count === 3) {
+        btn.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
